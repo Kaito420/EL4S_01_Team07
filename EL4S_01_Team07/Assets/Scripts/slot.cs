@@ -58,35 +58,35 @@ public class slot : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            Debug.Log("スペース押された");
+    //void Update()
+    //{
+    //    if (Keyboard.current.spaceKey.wasPressedThisFrame)
+    //    {
+    //        Debug.Log("スペース押された");
 
-            if (isSpinning) return;
+    //        if (isSpinning) return;
 
-            StartSlot(OnSlotFinished);
-        }
-    }
+    //        StartSlot(OnSlotFinished);
+    //    }
+    //}
 
-    private void OnSlotFinished(SlotResult result)
-    {
-        switch (result)
-        {
-            case SlotResult.MoreLuck:
-                Debug.Log("大当たり！");
-                break;
+    //private void OnSlotFinished(SlotResult result)
+    //{
+    //    switch (result)
+    //    {
+    //        case SlotResult.MoreLuck:
+    //            Debug.Log("大当たり！");
+    //            break;
 
-            case SlotResult.Luck:
-                Debug.Log("当たり！");
-                break;
+    //        case SlotResult.Luck:
+    //            Debug.Log("当たり！");
+    //            break;
 
-            case SlotResult.Miss:
-                Debug.Log("ハズレ！");
-                break;
-        }
-    }
+    //        case SlotResult.Miss:
+    //            Debug.Log("ハズレ！");
+    //            break;
+    //    }
+    //}
 
 
     public void StartSlot(Action<SlotResult> onFinished)

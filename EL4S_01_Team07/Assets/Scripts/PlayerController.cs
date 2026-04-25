@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 8f;
     [SerializeField] private BridgeInteract _bridgeInteract;
 
+    [SerializeField] private slot slotManager;
+
     private bool isGround = false;
 
     void Awake()
@@ -35,12 +37,36 @@ public class PlayerController : MonoBehaviour
             Debug.Log("橋掛けボタン押下");
             _bridgeInteract.BuildBridge();
         }
+
+        //スロット
+        if (Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            slotManager.StartSlot(OnSlotFinished);
+        }
     }
 
     void Jump()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         isGround = false;
+    }
+
+    private void OnSlotFinished(SlotResult result)
+    {
+        switch (result)
+        {
+            case SlotResult.MoreLuck:
+                Debug.Log("大当たり");
+                break;
+
+            case SlotResult.Luck:
+                Debug.Log("あたり");
+                break;
+
+            case SlotResult.Miss:
+                Debug.Log("はずれ");
+                break;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
