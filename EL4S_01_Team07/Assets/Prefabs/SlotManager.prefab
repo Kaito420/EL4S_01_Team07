@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &104768429702282254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3213015302199723357}
+  - component: {fileID: 4747930554620443025}
+  m_Layer: 0
+  m_Name: SlotManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3213015302199723357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104768429702282254}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4747930554620443025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104768429702282254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c2f172b14480a40b7a226f1fb02775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::slot
+  slotPanel: {fileID: 0}
+  reels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  moreLuckSprite: {fileID: -8509105774795407682, guid: 53a23c086f89a6246b7874f46759abe2, type: 3}
+  luckSprite: {fileID: -4954137170559072808, guid: ae1d34484a80c2d438b37de3d65e5623, type: 3}
+  missSprite: {fileID: 6717995043318059100, guid: 304f96da0d27d85438655734184f8f58, type: 3}
+  moreLuckRate: 10
+  luckRate: 50
+  missRate: 40
+  spinInterval: 0.05
+  stopDelay: 0.75
+  spinCountBeforeStop: 20
+  hideDelay: 1.5
