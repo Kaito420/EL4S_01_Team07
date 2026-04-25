@@ -418,6 +418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 750625477}
+  - component: {fileID: 750625478}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -441,6 +442,20 @@ Transform:
   - {fileID: 1498636218}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &750625478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750625476}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d084494040a5c740ba170a51f88ef7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PutWater
+  waterPrefab: {fileID: 5891869690559893491, guid: ac065e31b2583574090505995862fa2b, type: 3}
+  shotSpeed: {x: 2, y: 0}
 --- !u!1 &1498636217
 GameObject:
   m_ObjectHideFlags: 0
