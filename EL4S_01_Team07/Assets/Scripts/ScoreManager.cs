@@ -2,28 +2,51 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    // インスタンス
-    public static ScoreManager Instance { get; private set; }
+    private static ScoreManager _instance;
+    public static ScoreManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                // 既存探索
+                _instance = FindObjectOfType<ScoreManager>();
 
-    // スコア本体
+                // 無ければ生成
+                if (_instance == null)
+                {
+                    var obj = new GameObject("ScoreManager");
+                    _instance = obj.AddComponent<ScoreManager>();
+                    DontDestroyOnLoad(obj);
+                }
+            }
+            return _instance;
+        }
+    }
+
     public int Score { get; private set; }
 
     void Awake()
     {
-        // 既に存在する場合は破棄
-        if (Instance != null && Instance != this)
+        if (_instance != null && _instance != this)
         {
             Destroy(gameObject);
             return;
         }
 
-        Instance = this;
-
-        // シーン遷移しても保持したい場合
+        _instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
-    // スコア加算
+    void OnDestroy()
+    {
+        // 重要：破棄時にクリアしないと2周目で壊れる
+        if (_instance == this)
+        {
+            _instance = null;
+        }
+    }
+
     public void AddScore(int value)
     {
         Score += value;
@@ -39,7 +62,6 @@ public class ScoreManager : MonoBehaviour
         Score = value;
     }
 
-    // スコアリセット
     public void ResetScore()
     {
         Score = 0;
