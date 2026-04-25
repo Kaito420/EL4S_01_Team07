@@ -16,18 +16,18 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //ÉWÉÉÉìÉv
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && isGround)
+        if (Keyboard.current.spaceKey.isPressed && isGround)
         {
             Jump();
         }
 
         //êÖÇ©ÇØÇÈÇ‚Ç¬
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        if (Keyboard.current.eKey.isPressed)
         {
         }
 
         //ã¥Ç©ÇØÇÈÇ‚Ç¬
-        if (Keyboard.current.rKey.wasPressedThisFrame)
+        if (Keyboard.current.rKey.isPressed)
         {
         }
     }
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        isGround = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
