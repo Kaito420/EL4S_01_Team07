@@ -6,14 +6,15 @@ using System.Linq;
 
 public class FieldEdgeDetector : MonoBehaviour
 {
-    private GameObject _edgeEnd;
+    private GameObject _edgeEndObj;
+    private FieldEdgeEnd _edgeEnd;
     private List<FieldEdgeStart> _fieldEdgeStarts = new List<FieldEdgeStart>();
-     public GameObject _closestFieldEdgeStart;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _edgeEnd = transform.parent.gameObject;
+        _edgeEndObj = transform.parent.gameObject;
+        _edgeEnd = _edgeEndObj.GetComponent<FieldEdgeEnd>();
     }
 
     // Update is called once per frame
@@ -31,9 +32,9 @@ public class FieldEdgeDetector : MonoBehaviour
             foreach(var edgeStart in _fieldEdgeStarts)
             {
                 if(edgeStart == null) continue;
-                if ( _closestFieldEdgeStart == null ||Vector2.Distance(_edgeEnd.transform.position, edgeStart.transform.position) < Vector2.Distance(_edgeEnd.transform.position, _closestFieldEdgeStart.transform.position))
+                if ( _edgeEnd._closestFieldEdgeStart == null ||Vector2.Distance(_edgeEndObj.transform.position, edgeStart.transform.position) < Vector2.Distance(_edgeEndObj.transform.position, _edgeEnd._closestFieldEdgeStart.transform.position))
                 {
-                    _closestFieldEdgeStart = edgeStart.gameObject;
+                    _edgeEnd._closestFieldEdgeStart = edgeStart.gameObject;
                 }
             }
         }
