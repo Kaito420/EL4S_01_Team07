@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool isAlive = true;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float jumpForce = 8f;
 
