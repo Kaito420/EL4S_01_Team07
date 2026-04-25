@@ -56,6 +56,6 @@ MonoBehaviour:
   luckRate: 50
   missRate: 40
   spinInterval: 0.05
-  stopDelay: 1.5
+  stopDelay: 0.75
   spinCountBeforeStop: 20
   hideDelay: 1.5
