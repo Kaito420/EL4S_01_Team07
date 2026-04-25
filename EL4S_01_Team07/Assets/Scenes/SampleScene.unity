@@ -733,20 +733,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3685974343417008225, guid: c438e31e6fce19a4981b2afc7b962212, type: 3}
   m_PrefabInstance: {fileID: 1472017280}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1082942119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082942118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d084494040a5c740ba170a51f88ef7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PutWater
-  waterPrefab: {fileID: 5891869690559893491, guid: ac065e31b2583574090505995862fa2b, type: 3}
-  shotSpeed: {x: 10, y: 3}
 --- !u!82 &1082942124
 AudioSource:
   m_ObjectHideFlags: 0
@@ -855,6 +841,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6627d39864afd438b7180bdae065a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+--- !u!114 &1177603077 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7776121092023162740, guid: 923824d0ae419d94aa4c44f8a2a4ae13, type: 3}
+  m_PrefabInstance: {fileID: 247737227}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0978411a498ce2147b8878bf3d5a5eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapManager
 --- !u!1001 &1355808478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1072,6 +1069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3982712296373150446, guid: c438e31e6fce19a4981b2afc7b962212, type: 3}
+      propertyPath: _mapManager
+      value: 
+      objectReference: {fileID: 1177603077}
     - target: {fileID: 8107354201631946772, guid: c438e31e6fce19a4981b2afc7b962212, type: 3}
       propertyPath: jumpAudio
       value: 
@@ -1096,13 +1097,22 @@ PrefabInstance:
       propertyPath: 'audioClips.Array.data[2]'
       value: 
       objectReference: {fileID: 8300000, guid: 541578cd90111470dae5106825984cb1, type: 3}
+    - target: {fileID: 8818592635064145378, guid: c438e31e6fce19a4981b2afc7b962212, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818592635064145378, guid: c438e31e6fce19a4981b2afc7b962212, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818592635064145378, guid: c438e31e6fce19a4981b2afc7b962212, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.49
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3685974343417008225, guid: c438e31e6fce19a4981b2afc7b962212, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1082942119}
     - targetCorrespondingSourceObject: {fileID: 3685974343417008225, guid: c438e31e6fce19a4981b2afc7b962212, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1082942124}
