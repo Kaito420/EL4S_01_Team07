@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7934369106151520064}
   - component: {fileID: 99161492210360379}
   - component: {fileID: 349920138341046767}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Appearance
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 4379239816813570830}
   - component: {fileID: 3982712296373150446}
   - component: {fileID: 3631953957661857097}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeInteract
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,6 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36756927e4f3ef40ab61da6c14e34b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BridgeInteract
+  _mapManager: {fileID: 0}
   _bridgePrefab: {fileID: 2545393884948640781, guid: 6bae6933933631c4a9ddd8f3eff2a307, type: 3}
   _canBuildBridge: 0
 --- !u!50 &3631953957661857097
@@ -311,7 +312,8 @@ GameObject:
   - component: {fileID: 2545043127753975038}
   - component: {fileID: 8107354201631946772}
   - component: {fileID: 2356112936970346956}
-  m_Layer: 0
+  - component: {fileID: 382553923935927811}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -347,9 +349,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6627d39864afd438b7180bdae065a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  isAlive: 1
   rb: {fileID: 2356112936970346956}
   jumpForce: 8
   _bridgeInteract: {fileID: 3982712296373150446}
+  slotManager: {fileID: 0}
 --- !u!50 &2356112936970346956
 Rigidbody2D:
   serializedVersion: 5
@@ -377,3 +381,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &382553923935927811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3685974343417008225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d084494040a5c740ba170a51f88ef7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PutWater
+  waterPrefab: {fileID: 5891869690559893491, guid: ac065e31b2583574090505995862fa2b, type: 3}
+  shotSpeed: {x: 10, y: 3}

@@ -5,17 +5,24 @@ public class PlayerController : MonoBehaviour
 {
     public bool isAlive = true;
 
+    [SerializeField]private Camera mainCamera;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float jumpForce = 8f;
     [SerializeField] private BridgeInteract _bridgeInteract;
 
     [SerializeField] private slot slotManager;
+    [SerializeField] private AudioClip[] audioClips;
+    [SerializeField] private AudioSource jumpAudio;
 
     private bool isGround = false;
+
+    private AudioSource audioSource;
 
     void Awake()
     {
         rb = GetComponentInChildren<Rigidbody2D>();
+        mainCamera = Camera.main;
+        audioSource = mainCamera.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -47,12 +54,20 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
+        jumpAudio.Play();
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         isGround = false;
     }
 
     private void OnSlotFinished(SlotResult result)
     {
+        audioSource.Stop();
+        if (0 <= (int)result && (int)result < audioClips.Length)
+        {
+            audioSource.clip = audioClips[(int)result];
+        }
+        audioSource.Play();
+
         switch (result)
         {
             case SlotResult.MoreLuck:
