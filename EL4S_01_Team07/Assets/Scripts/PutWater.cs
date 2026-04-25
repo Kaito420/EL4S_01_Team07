@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PutWater : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class PutWater : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Vector3 pos = transform.position;
             pos.x += transform.localScale.x / 2 + waterPrefab.transform.localScale.x / 2;
