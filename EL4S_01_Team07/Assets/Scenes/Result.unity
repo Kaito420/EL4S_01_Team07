@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 568359432}
   - component: {fileID: 568359431}
   m_Layer: 5
-  m_Name: Text (Legacy) (1)
+  m_Name: "Text (\u30B2\u30FC\u30E0\u30B9\u30B3\u30A2) (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,7 +293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ff5cfd3409df74ba340cf3fc2a12e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Score_Test: 0
 --- !u!114 &568359432
 MonoBehaviour:
   m_ObjectHideFlags: 0
