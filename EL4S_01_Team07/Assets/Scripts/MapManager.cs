@@ -8,6 +8,7 @@ public class MapManager : MonoBehaviour
 
     public GameObject[] _maps;
     private GameObject _currentField;
+    public GameObject CurrentField => _currentField;
     private GameObject _nextField;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
