@@ -44,5 +44,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0978411a498ce2147b8878bf3d5a5eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
+  scrollSpeed: 5
+  moveDistance: 0
   _maps:
   - {fileID: 4718122295346687621, guid: 69585aca77ff8df408d7a6532131aaf9, type: 3}
+  - {fileID: 654065736862781425, guid: 082c636b1a79aca4dafbea975f0bf060, type: 3}
+  - {fileID: 8074807228190943772, guid: 8ad49e0a0bbe7424baa1ba7f160d2b09, type: 3}
+  - {fileID: 8438058638897069242, guid: 0ea15b21a9e5b9640a90540eb277b85f, type: 3}
+  - {fileID: 5048180819257460843, guid: 01553eddb7f0bd949b0414fb24a4ac3c, type: 3}
+  - {fileID: 1590371423078558756, guid: 6493dacdcc5728443b8c4c325191dd75, type: 3}
+  - {fileID: 5487871894097546219, guid: 69af5a0953671d44db031480f472c6c8, type: 3}
+  - {fileID: 486049012288503356, guid: 95273ec2207cbd04594b57622a27237e, type: 3}
+  - {fileID: 6638159768538231444, guid: ee89d92641c06174c9cef3629a912e55, type: 3}
+  - {fileID: 3652675911829100796, guid: 7da9ab8bf5b10ae4ab4285512c6174c0, type: 3}
+  - {fileID: 1395848172098360609, guid: 0fb588c4221337e4493c4a4fc0b2b6c9, type: 3}
+  - {fileID: 432977498408349561, guid: 9c8740662d11d674f9a0c496482e10de, type: 3}
+  - {fileID: 6942032994845176366, guid: 0f38c2158980e2d428b9088121b56968, type: 3}
+  - {fileID: 559851177808586950, guid: 1d3f8a68527e8e747a0e63538e928ef0, type: 3}
+  - {fileID: 5001794985067933024, guid: d2000fe8beba28d4da6432a35680d21b, type: 3}
+  - {fileID: 6416161773334786827, guid: 9181302b780cf6c42b0dfef07ecd74ec, type: 3}
