@@ -611,6 +611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6627d39864afd438b7180bdae065a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  isAlive: 1
+  deadZoneY: -8.5
   rb: {fileID: 1498636219}
   jumpForce: 8
 --- !u!1 &2063021945
@@ -643,6 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d75fb88c837d743b036145879c5fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  scrollSpeedX: 0.5
 --- !u!212 &2063021947
 SpriteRenderer:
   serializedVersion: 2
