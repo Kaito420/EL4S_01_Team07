@@ -658,6 +658,65 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cc6aa0ac377bb344b0af79c7ab3e02c, type: 3}
+--- !u!1 &843019158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 843019161}
+  - component: {fileID: 843019160}
+  - component: {fileID: 843019159}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &843019159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843019158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79f9faa33f809b408bd6df7207a3de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneChange
+  sceneAsset: {fileID: 102900000, guid: 63835bde6163d704096858143568db46, type: 3}
+--- !u!114 &843019160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843019158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ac941a73516f4438492cf395257576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckGameOver
+  playerController: {fileID: 1082942127}
+--- !u!4 &843019161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843019158}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.40027, y: -0.05228, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1050920420 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1056090098793890410, guid: 5537968a09fef1f46a00032d68b33c9d, type: 3}
@@ -785,6 +844,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1082942127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8107354201631946772, guid: c438e31e6fce19a4981b2afc7b962212, type: 3}
+  m_PrefabInstance: {fileID: 1472017280}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082942118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6627d39864afd438b7180bdae065a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
 --- !u!1001 &1355808478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1085,3 +1155,4 @@ SceneRoots:
   - {fileID: 1472017280}
   - {fileID: 672466773}
   - {fileID: 1355808478}
+  - {fileID: 843019161}
