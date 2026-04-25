@@ -1,10 +1,11 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float jumpForce = 8f;
+    [SerializeField] private BridgeInteract _bridgeInteract;
 
     private bool isGround = false;
 
@@ -15,20 +16,22 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //ƒWƒƒƒ“ƒv
+        //ã‚¸ãƒ£ãƒ³ãƒ—
         if (Keyboard.current.spaceKey.wasPressedThisFrame && isGround)
         {
             Jump();
         }
 
-        //…‚©‚¯‚é‚â‚Â
+        //æ°´ã‹ã‘ã‚‹ã‚„ã¤
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
         }
 
-        //‹´‚©‚¯‚é‚â‚Â
+        //æ©‹ã‹ã‘ã‚‹ã‚„ã¤
         if (Keyboard.current.rKey.wasPressedThisFrame)
         {
+            Debug.Log("æ©‹æ›ã‘ãƒœã‚¿ãƒ³æŠ¼ä¸‹");
+            _bridgeInteract.BuildBridge();
         }
     }
 
