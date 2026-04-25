@@ -107,3 +107,6 @@ InitTestScene*.unity*
 
 # macOSのファイルシステムメタファイル
 .DS_Store
+
+# VSCodeの設定
+.vscode/
