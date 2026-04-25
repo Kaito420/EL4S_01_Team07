@@ -19,7 +19,7 @@ public class MapManager : MonoBehaviour
         _currentField.transform.Translate(Vector3.left * Time.deltaTime * 5);
         _nextField.transform.Translate(Vector3.left * Time.deltaTime * 5);
 
-        if (_currentField.transform.position.x < -18.0f)
+        if (_currentField.transform.position.x <= -18.0f)
         {
             Destroy(_currentField);
             _currentField = _nextField;
