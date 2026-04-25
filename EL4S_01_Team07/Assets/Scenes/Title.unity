@@ -831,6 +831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952350923}
   - component: {fileID: 1952350924}
+  - component: {fileID: 1952350925}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -866,6 +867,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   sceneAsset: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
+--- !u!114 &1952350925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952350922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9d949109ffd6a479c18a2a3b98eccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
 --- !u!1 &1986839632
 GameObject:
   m_ObjectHideFlags: 0

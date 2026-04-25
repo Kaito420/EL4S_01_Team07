@@ -11,7 +11,7 @@ public class DisplayScore : MonoBehaviour
 
     void Start()
     {
-        GameScore = Score_Test;
+        GameScore = ScoreManager.Instance.GetScore();
         
         if (GameScore>=9999)
         {

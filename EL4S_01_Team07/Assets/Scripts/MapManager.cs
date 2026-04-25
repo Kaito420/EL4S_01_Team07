@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
+
 public class MapManager : MonoBehaviour
 {
     public float scrollSpeed = 5.0f;
@@ -45,5 +46,7 @@ public class MapManager : MonoBehaviour
             _currentField = _nextField;
             _nextField = Instantiate(_maps[Random.Range(0, _maps.Length)], new Vector3(offset, 0, 0), Quaternion.identity);
         }
+
+        ScoreManager.Instance.SetScore((int)moveDistance);
     }
 }
