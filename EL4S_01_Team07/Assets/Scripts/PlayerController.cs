@@ -1,10 +1,13 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool isAlive = true;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float jumpForce = 8f;
+    [SerializeField] private BridgeInteract _bridgeInteract;
 
     private bool isGround = false;
 
@@ -15,20 +18,22 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //ÉWÉÉÉìÉv
-        if (Keyboard.current.spaceKey.isPressed && isGround)
+        //„Ç∏„É£„É≥„Éó
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && isGround)
         {
             Jump();
         }
 
-        //êÖÇ©ÇØÇÈÇ‚Ç¬
-        if (Keyboard.current.eKey.isPressed)
+        //Ê∞¥„Åã„Åë„Çã„ÇÑ„Å§
+        if (Keyboard.current.eKey.wasPressedThisFrame)
         {
         }
 
-        //ã¥Ç©ÇØÇÈÇ‚Ç¬
-        if (Keyboard.current.rKey.isPressed)
+        //Ê©ã„Åã„Åë„Çã„ÇÑ„Å§
+        if (Keyboard.current.rKey.wasPressedThisFrame)
         {
+            Debug.Log("Ê©ãÊéõ„Åë„Éú„Çø„É≥Êäº‰∏ã");
+            _bridgeInteract.BuildBridge();
         }
     }
 
@@ -39,6 +44,14 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Field")
+        {
+            isGround = true;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Field")
         {
