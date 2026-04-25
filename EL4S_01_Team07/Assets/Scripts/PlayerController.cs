@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public bool isAlive = true;
+    public float deadZoneY = -8.5f;
 
     [SerializeField]private Camera mainCamera;
     [SerializeField] private Rigidbody2D rb;
@@ -50,6 +51,11 @@ public class PlayerController : MonoBehaviour
         {
             slotManager.StartSlot(OnSlotFinished);
         }
+
+        if (transform.position.y < deadZoneY)
+        {
+            isAlive = false;
+        }
     }
 
     void Jump()
@@ -89,6 +95,10 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Field")
         {
             isGround = true;
+        }
+        else if (collision.gameObject.tag == "Enemy")
+        {
+            isAlive = false;
         }
     }
 
