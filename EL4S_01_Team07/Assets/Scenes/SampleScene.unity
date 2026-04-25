@@ -418,7 +418,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 750625477}
-  - component: {fileID: 750625478}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -442,20 +441,65 @@ Transform:
   - {fileID: 1498636218}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &750625478
+--- !u!1 &1092855605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1092855607}
+  - component: {fileID: 1092855606}
+  - component: {fileID: 1092855608}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1092855606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750625476}
-  m_Enabled: 0
+  m_GameObject: {fileID: 1092855605}
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d084494040a5c740ba170a51f88ef7e, type: 3}
+  m_Script: {fileID: 11500000, guid: f79f9faa33f809b408bd6df7207a3de4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PutWater
-  waterPrefab: {fileID: 5891869690559893491, guid: ac065e31b2583574090505995862fa2b, type: 3}
-  shotSpeed: {x: 2, y: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::SceneChange
+  sceneAsset: {fileID: 102900000, guid: 63835bde6163d704096858143568db46, type: 3}
+--- !u!4 &1092855607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092855605}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.80507, y: 0.28952, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1092855608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092855605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ac941a73516f4438492cf395257576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckGameOver
+  playerController: {fileID: 1498636222}
 --- !u!1 &1498636217
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +513,7 @@ GameObject:
   - component: {fileID: 1498636220}
   - component: {fileID: 1498636219}
   - component: {fileID: 1498636222}
+  - component: {fileID: 1498636223}
   m_Layer: 0
   m_Name: Appearance
   m_TagString: Player
@@ -629,6 +674,20 @@ MonoBehaviour:
   isAlive: 1
   rb: {fileID: 1498636219}
   jumpForce: 8
+--- !u!114 &1498636223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498636217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d084494040a5c740ba170a51f88ef7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PutWater
+  waterPrefab: {fileID: 5891869690559893491, guid: ac065e31b2583574090505995862fa2b, type: 3}
+  shotSpeed: {x: 1, y: 0}
 --- !u!1001 &4823069074579527739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -695,3 +754,4 @@ SceneRoots:
   - {fileID: 750625477}
   - {fileID: 247737227}
   - {fileID: 4823069074579527739}
+  - {fileID: 1092855607}
